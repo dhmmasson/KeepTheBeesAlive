@@ -612,8 +612,11 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
-    Collab: 1
-    UNet: 1
+    Build: 0
+    Collab: 0
+    ErrorHub: 0
+    Hub: 0
+    UNet: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -633,9 +636,9 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 89e83c18-ca43-41be-a422-a24a5b5c2361
+  cloudProjectId: b020e714-700f-452a-adaf-6f1cd9c5359d
   framebufferDepthMemorylessMode: 0
-  projectName: ludumDare
+  projectName: ludumDare (1)
   organizationId: unity_te44jlxuqt46sw
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
