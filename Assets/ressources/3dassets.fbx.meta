@@ -11,6 +11,7 @@ ModelImporter:
     100010: largeStone
     100012: plank
     100014: Scene
+    100016: deadTree
     400000: //RootNode
     400002: beehive
     400004: Branch
@@ -19,6 +20,7 @@ ModelImporter:
     400010: largeStone
     400012: plank
     400014: Scene
+    400016: deadTree
     2100000: flatColor
     2300000: beehive
     2300002: Branch
@@ -27,6 +29,7 @@ ModelImporter:
     2300008: largeStone
     2300010: plank
     2300012: Scene
+    2300014: deadTree
     3300000: beehive
     3300002: Branch
     3300004: Brick
@@ -34,6 +37,7 @@ ModelImporter:
     3300008: largeStone
     3300010: plank
     3300012: Scene
+    3300014: deadTree
     4300000: Scene
     4300002: Cactus
     4300004: beehive
@@ -41,6 +45,7 @@ ModelImporter:
     4300008: Brick
     4300010: plank
     4300012: largeStone
+    4300014: deadTree
   externalObjects: {}
   materials:
     importMaterials: 0

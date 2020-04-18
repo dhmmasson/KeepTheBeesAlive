@@ -12,9 +12,11 @@ public class CreateObject : MonoBehaviour
     {
       foreach (buildingBlocks.elementSettings element in level.elements) {
         for( int i = 0 ; i < element.repetition ; i++ ){
+
           float x = Random.Range(-2, 2) ;
-          float y = Random.Range(1, 4) ;
-          Instantiate(element.asset, new Vector3(x,y,0), Quaternion.identity);
+          float y = 1f+i ;
+
+          Instantiate(element.asset, element.dropCenter + new Vector3(x,y,-0.5f), Quaternion.identity);
         }
       }
     }
