@@ -1,43 +1,51 @@
 fileFormatVersion: 2
-guid: 53a1b73efe17b4341bc96899855c6312
+guid: a957977477a8841fe8db4137cb34138d
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: beehive
-    100004: Branch
-    100006: Brick
-    100008: Cactus
-    100010: largeStone
-    100012: plank
-    100014: Scene
-    100016: deadTree
+    100002: Bee
+    100004: beehive
+    100006: Branch
+    100008: Brick
+    100010: Cactus
+    100012: deadTree
+    100014: largeStone
+    100016: plank
+    100018: rain
+    100020: Scene
     400000: //RootNode
-    400002: beehive
-    400004: Branch
-    400006: Brick
-    400008: Cactus
-    400010: largeStone
-    400012: plank
-    400014: Scene
-    400016: deadTree
+    400002: Bee
+    400004: beehive
+    400006: Branch
+    400008: Brick
+    400010: Cactus
+    400012: deadTree
+    400014: largeStone
+    400016: plank
+    400018: rain
+    400020: Scene
     2100000: flatColor
-    2300000: beehive
-    2300002: Branch
-    2300004: Brick
-    2300006: Cactus
-    2300008: largeStone
-    2300010: plank
-    2300012: Scene
-    2300014: deadTree
-    3300000: beehive
-    3300002: Branch
-    3300004: Brick
-    3300006: Cactus
-    3300008: largeStone
-    3300010: plank
-    3300012: Scene
-    3300014: deadTree
+    2300000: Bee
+    2300002: beehive
+    2300004: Branch
+    2300006: Brick
+    2300008: Cactus
+    2300010: deadTree
+    2300012: largeStone
+    2300014: plank
+    2300016: rain
+    2300018: Scene
+    3300000: Bee
+    3300002: beehive
+    3300004: Branch
+    3300006: Brick
+    3300008: Cactus
+    3300010: deadTree
+    3300012: largeStone
+    3300014: plank
+    3300016: rain
+    3300018: Scene
     4300000: Scene
     4300002: Cactus
     4300004: beehive
@@ -46,9 +54,11 @@ ModelImporter:
     4300010: plank
     4300012: largeStone
     4300014: deadTree
+    4300016: Bee
+    4300018: rain
   externalObjects: {}
   materials:
-    importMaterials: 0
+    importMaterials: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1

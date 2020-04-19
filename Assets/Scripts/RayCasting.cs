@@ -5,6 +5,7 @@ using UnityEngine;
 public class RayCasting : MonoBehaviour
 {
     private GameObject selection = null ;
+    private GameObject highlighted = null ;
     private State currentState ;
 
 
@@ -13,12 +14,22 @@ public class RayCasting : MonoBehaviour
     private int sceneMask  ;
     private int targetMask ;
 
+    [ColorUsage(true, true)]
+    public Color highlightColor ;
+    [ColorUsage(true, true)]
+    public Color moveColor ;
+    private Material material ;
+
+    public Rigidbody anchor ;
+    private SpringJoint spring ;
     // Start is called before the first frame update
     void Start()
     {
       transform.position = Camera.main.transform.position ;
       sceneMask = ( 1 << sceneLayer ) ;
       targetMask = ( 1 << targetLayer ) ;
+      material = GetComponent<Renderer>().material ;
+      material.EnableKeyword("_EMISSION");
     }
 
     // Update is called once per frame
@@ -31,18 +42,39 @@ public class RayCasting : MonoBehaviour
 
     void handleIdle( ) {
       //On left click on an object select it
-      if ( Input.GetMouseButtonDown (0)){
-        int layerMask = ~(sceneMask + targetMask);
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        // Does the ray intersect any objects excluding the background sceend
-        if (Physics.Raycast(ray, out hit, 20f, layerMask))
-        {
-           Debug.Log("You selected the " + hit.transform.name);
-           Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.yellow,2f, true);
+      int layerMask = ~(sceneMask + targetMask);
+      RaycastHit hit;
+      Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+      // Does the ray intersect any objects excluding the background sceend
+      if (Physics.Raycast(ray, out hit, 20f, layerMask)) {
+        if ( Input.GetMouseButtonDown (0) ){
            getTargetPosition( hit.point ) ;
            currentState = State.moving ;
            selection = hit.transform.gameObject ;
+           material.SetColor(Shader.PropertyToID("_EmissionColor"), moveColor);
+
+            spring = selection.AddComponent( typeof( SpringJoint)) as SpringJoint ;
+           spring.connectedBody = anchor ;
+           spring.autoConfigureConnectedAnchor = false ;
+           spring.anchor = hit.transform.InverseTransformPoint( hit.point ) ;
+           spring.connectedAnchor = new Vector3(0,0,0) ;
+           spring.maxDistance = .1f ;
+           spring.spring = 10000 ;
+           spring.damper = 2000 ;
+
+        } else {
+          highlight( highlighted, 0 ) ;
+          transform.position = hit.point   ;
+          material.SetColor(Shader.PropertyToID("_EmissionColor"), highlightColor);
+          highlighted = hit.transform.gameObject ;
+          highlight( highlighted, 0.2f ) ;
+        }
+      } else {
+        //unhilight element
+        if( highlighted != null ) {
+          highlight( highlighted, 0 ) ;
+          transform.position = Camera.main.transform.position ;
+          highlighted = null ;
         }
       }
     }
@@ -50,9 +82,13 @@ public class RayCasting : MonoBehaviour
     void handleMoving() {
       if ( Input.GetMouseButton(0) ){
         getTargetPosition( transform.position ) ;
+        highlight( selection, 0.51f ) ;
       } else {
         currentState = State.idle ;
-          transform.position = Camera.main.transform.position ;
+        transform.position = Camera.main.transform.position ;
+        highlight( selection, 0 ) ;
+        Destroy(spring);
+        selection = null ;
       }
     }
 
@@ -65,11 +101,18 @@ public class RayCasting : MonoBehaviour
       if (Physics.Raycast(ray, out hit, 20f, ~sceneMask)) {
         Debug.Log("You are pointing at" + hit.transform.name);
         Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.red,0.1f, true);
+
         transform.position = hit.point ;
         return hit.point ;
       }
       return point ;
     }
+
+    void highlight( GameObject block, float value ) {
+      if( block != null )
+      block.GetComponent<Renderer>().material.SetFloat(Shader.PropertyToID("_Vector1_37E861F"), value);
+    }
+
 
    public enum State
    {
