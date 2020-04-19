@@ -8,8 +8,10 @@ public class CreateObject : MonoBehaviour
     public int width = 10;
     public int height = 4;
     public buildingBlocks level ;
-    void Start()
-    {
+    public void onStartLevel() {
+      createObject() ;
+    }
+    void createObject() {
       foreach (buildingBlocks.elementSettings element in level.elements) {
         for( int i = 0 ; i < element.repetition ; i++ ){
 
@@ -20,13 +22,5 @@ public class CreateObject : MonoBehaviour
         }
       }
     }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
 
 }

@@ -28,7 +28,7 @@ Transform:
   m_LocalScale: {x: 7.5008135, y: 2.1691813, z: 7.5008135}
   m_Children:
   - {fileID: 5858443793792041126}
-  - {fileID: 7333902813671902175}
+  - {fileID: 2810944232934602042}
   m_Father: {fileID: 6493270175095276378}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: 6493270175093375416}
   - component: {fileID: 6493270175095644010}
   - component: {fileID: 6493270175095644013}
+  - component: {fileID: 8093658497896671641}
   m_Layer: 0
   m_Name: beehive
   m_TagString: Untagged
@@ -142,6 +143,20 @@ CapsuleCollider:
   m_Height: 0.62880623
   m_Direction: 1
   m_Center: {x: -0.008825035, y: -0.32703668, z: -0.04239419}
+--- !u!114 &8093658497896671641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6493270175095644026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acc22d206948f4d1dba9d8ac29db938d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  normalBee: {fileID: 7912236204595618239}
+  angryBee: {fileID: 6319814468557828282}
 --- !u!1001 &1712168556264992734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -216,13 +231,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb351f80bee9f46fa80c184b2bb6f425, type: 3}
+--- !u!1 &7912236204595618239 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8795302278969724513, guid: fb351f80bee9f46fa80c184b2bb6f425,
+    type: 3}
+  m_PrefabInstance: {fileID: 1712168556264992734}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5858443793792041126 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5084431684348522360, guid: fb351f80bee9f46fa80c184b2bb6f425,
     type: 3}
   m_PrefabInstance: {fileID: 1712168556264992734}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &2164391289157666132
+--- !u!1001 &6686804532940798897
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -233,6 +254,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: angryBee
+      objectReference: {fileID: 0}
+    - target: {fileID: 826463914184870667, guid: 22a122baa9c824957b93955876377dc0,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8921129108224052875, guid: 22a122baa9c824957b93955876377dc0,
         type: 3}
@@ -289,11 +315,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2014945736723393298, guid: 22a122baa9c824957b93955876377dc0,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2014945736723393298, guid: 22a122baa9c824957b93955876377dc0,
+        type: 3}
+      propertyPath: lengthInSec
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22a122baa9c824957b93955876377dc0, type: 3}
---- !u!4 &7333902813671902175 stripped
+--- !u!1 &6319814468557828282 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 826463914184870667, guid: 22a122baa9c824957b93955876377dc0,
+    type: 3}
+  m_PrefabInstance: {fileID: 6686804532940798897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2810944232934602042 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8921129108224052875, guid: 22a122baa9c824957b93955876377dc0,
     type: 3}
-  m_PrefabInstance: {fileID: 2164391289157666132}
+  m_PrefabInstance: {fileID: 6686804532940798897}
   m_PrefabAsset: {fileID: 0}

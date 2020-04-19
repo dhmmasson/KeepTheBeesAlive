@@ -23,6 +23,8 @@ public class RayCasting : MonoBehaviour
     public Rigidbody anchor ;
     private SpringJoint spring ;
     // Start is called before the first frame update
+    public AudioSource click ;
+    //
     void Start()
     {
       transform.position = Camera.main.transform.position ;
@@ -61,7 +63,7 @@ public class RayCasting : MonoBehaviour
            spring.maxDistance = .1f ;
            spring.spring = 10000 ;
            spring.damper = 2000 ;
-
+           click.Play();
         } else {
           highlight( highlighted, 0 ) ;
           transform.position = hit.point   ;
