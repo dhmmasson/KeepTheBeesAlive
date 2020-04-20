@@ -43,7 +43,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3105769929370891100}
   serializedVersion: 6
-  lengthInSec: 5
+  lengthInSec: 30
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -118,7 +118,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 2
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -603,7 +603,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 2000
     size3D: 0
     rotation3D: 0
     gravityModifier:
@@ -670,7 +670,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: -0.5}
     m_Rotation: {x: 90, y: 0, z: 0}
-    m_Scale: {x: 8, y: 2, z: 0.2}
+    m_Scale: {x: 6, y: 2.5, z: 0.4}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -737,7 +737,7 @@ ParticleSystem:
     m_SpriteRenderer: {fileID: 0}
     m_UseMeshMaterialIndex: 0
     m_UseMeshColors: 1
-    alignToDirection: 0
+    alignToDirection: 1
     m_Texture: {fileID: 0}
     m_TextureClipChannel: 3
     m_TextureClipThreshold: 0
@@ -867,30 +867,30 @@ ParticleSystem:
     serializedVersion: 4
     rateOverTime:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 100
+      minMaxState: 2
+      scalar: 400
       minScalar: 10
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
+          value: 0.63985324
+          inSlope: 1.3215977
+          outSlope: 1.3215977
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
+          inWeight: 0
+          outWeight: 0.13915093
         - serializedVersion: 3
           time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
+          value: 0.6130245
+          inSlope: -1.5367347
+          outSlope: -1.5367347
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
+          inWeight: 0.08726424
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
@@ -898,23 +898,50 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
+          time: 0.0028648376
+          value: 0.45210266
+          inSlope: 0.77246475
+          outSlope: 0.77246475
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.13431238
+        - serializedVersion: 3
+          time: 0.37023416
+          value: 0.7552648
+          inSlope: -0.02498538
+          outSlope: -0.02498538
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.28240395
+          outWeight: 0.18559748
+        - serializedVersion: 3
+          time: 0.58863133
+          value: 0.5851972
+          inSlope: -0.25155306
+          outSlope: -0.25155306
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.76435405
+          value: 0.68166304
+          inSlope: -0.071517564
+          outSlope: -0.071517564
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
           time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
+          value: 0.4980899
+          inSlope: -1.3978753
+          outSlope: -1.3978753
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
+          inWeight: 0.063218385
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
@@ -3678,11 +3705,11 @@ ParticleSystem:
         m_RotationOrder: 4
     minKillSpeed: 0
     maxKillSpeed: 1
-    radiusScale: 1
+    radiusScale: 1.5
     collidesWith:
       serializedVersion: 2
       m_Bits: 1
-    maxCollisionShapes: 10
+    maxCollisionShapes: 100
     quality: 0
     voxelSize: 0.5
     collisionMessages: 1
