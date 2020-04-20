@@ -7,6 +7,6 @@ public class collisionSound : MonoBehaviour
     public AudioSource[] sounds ;
     void OnCollisionEnter(Collision collision){
       int index = Random.Range (0, sounds.Length);
-      sounds[index].Play() ;
+      //sounds[index].Play() ;
     }
 }

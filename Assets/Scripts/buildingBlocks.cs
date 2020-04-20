@@ -13,7 +13,7 @@ public class buildingBlocks : ScriptableObject
     [Range(0,20)]
     public int repetition = 1 ;
     public Vector3 dropCenter = new Vector3(0,2,0);
-    public int spreadRadius = 0 ;
+    public float spreadRadius = 0 ;
   }
 
 }

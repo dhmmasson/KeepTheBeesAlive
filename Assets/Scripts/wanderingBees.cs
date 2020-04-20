@@ -1,6 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TMPro ; 
+using TMPro ;
 using UnityEngine;
 
 public class wanderingBees : MonoBehaviour
@@ -12,11 +12,21 @@ public class wanderingBees : MonoBehaviour
   }
   void OnParticleCollision(GameObject block) {
     plant target = block.GetComponent<plant>() ;
-    Debug.Log("Bee hit something") ;
     if( target ) {
-      Debug.Log("Bee hit a flower") ;
-      score++ ;
+      score+= target.nbFlower  ;
       scoreBoard.SetText("score " + score ) ;
+      StartCoroutine( lightCactus( block )) ;
     }
+  }
+
+  IEnumerator lightCactus( GameObject target ) {
+    highlight( target, 0.1f ) ;
+    yield return new WaitForSeconds(0.2f);
+    highlight( target, 0 ) ;
+  }
+
+  void highlight( GameObject block, float value ) {
+    if( block != null )
+    block.GetComponent<Renderer>().material.SetFloat(Shader.PropertyToID("_Vector1_37E861F"), value);
   }
 }

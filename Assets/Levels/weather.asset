@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11d4b6063b9ba4816bfe1afe3be38f8b, type: 3}
+  m_Name: weather
+  m_EditorClassIdentifier: 
+  elements:
+  - label: Rain
+    particle: {fileID: 3105769929370891100, guid: 7a99b86ec550e4ab28822e32a7a68a42,
+      type: 3}
+    Duration: 10
+    profile: {fileID: 11400000, guid: 680922c45b9bfe14085ea8a49e7d23dd, type: 2}
+  - label: Sun
+    particle: {fileID: 0}
+    Duration: 30
+    profile: {fileID: 11400000, guid: e9c9ac0186e7444e3a27f57dce470b50, type: 2}

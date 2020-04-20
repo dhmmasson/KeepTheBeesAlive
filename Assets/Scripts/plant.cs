@@ -6,7 +6,7 @@ public class plant : MonoBehaviour
 {
     public int waterLevel = 0 ;
     public FlowerStage[] stages ;
-
+    public int nbFlower = 0 ;
 
     private List<ParticleCollisionEvent> collisionEvents;
     void Start()
@@ -23,10 +23,12 @@ public class plant : MonoBehaviour
     void OnParticleCollision(GameObject particuleSystemObject) {
       int numCollisionEvents = particuleSystemObject.GetComponent<ParticleSystem>().GetCollisionEvents(this.gameObject, collisionEvents);
       waterLevel += numCollisionEvents ;
+
       foreach( FlowerStage stage in stages) {
         if( waterLevel > stage.waterLevel ) {
           MeshFilter mf = GetComponent<MeshFilter>() ;
           mf.mesh = Instantiate(stage.mesh) ;
+          nbFlower = stage.flowerCount ;
         }
       }
     }
