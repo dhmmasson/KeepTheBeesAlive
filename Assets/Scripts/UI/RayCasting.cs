@@ -18,8 +18,8 @@ public class RayCasting : MonoBehaviour
     public Color highlightColor ;
     [ColorUsage(true, true)]
     public Color moveColor ;
-    private Material material ;
 
+    private Material material ;
     public Rigidbody anchor ;
     private SpringJoint spring ;
     // Start is called before the first frame update
@@ -40,6 +40,7 @@ public class RayCasting : MonoBehaviour
         case State.idle: handleIdle() ; break ;
         case State.moving: handleMoving() ; break ;
       }
+      HighlightWall() ;
     }
 
     void handleIdle( ) {
@@ -49,13 +50,14 @@ public class RayCasting : MonoBehaviour
       Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
       // Does the ray intersect any objects excluding the background sceend
       if (Physics.Raycast(ray, out hit, 20f, layerMask)) {
+
         if ( Input.GetMouseButtonDown (0) ){
            getTargetPosition( hit.point ) ;
            currentState = State.moving ;
            selection = hit.transform.gameObject ;
            material.SetColor(Shader.PropertyToID("_EmissionColor"), moveColor);
 
-            spring = selection.AddComponent( typeof( SpringJoint)) as SpringJoint ;
+           spring = selection.AddComponent( typeof( SpringJoint)) as SpringJoint ;
            spring.connectedBody = anchor ;
            spring.autoConfigureConnectedAnchor = false ;
            spring.anchor = hit.transform.InverseTransformPoint( hit.point ) ;
@@ -96,16 +98,11 @@ public class RayCasting : MonoBehaviour
 
     Vector3 getTargetPosition( Vector3 point ) {
       //Layer 9 is the building area collider
-
       RaycastHit hit;
       Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-      // Does the ray intersect any objects excluding the player layer
       if (Physics.Raycast(ray, out hit, 20f, ~sceneMask)) {
-        Debug.Log("You are pointing at" + hit.transform.name);
-        Debug.DrawRay(ray.origin, ray.direction * hit.distance, Color.red,0.1f, true);
-
         transform.position = hit.point ;
-        return hit.point ;
+              return hit.point ;
       }
       return point ;
     }
@@ -115,6 +112,18 @@ public class RayCasting : MonoBehaviour
       block.GetComponent<Renderer>().material.SetFloat(Shader.PropertyToID("_Vector1_37E861F"), value);
     }
 
+    void HighlightWall() {
+      float opacity = (currentState==State.idle)?0.1f:0.5f  ;
+      RaycastHit hit;
+      Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+      if (Physics.Raycast(ray, out hit, 20f, targetMask)) {
+        Material targetMaterial = hit.collider.gameObject.GetComponent<Renderer>().material ;
+        if( targetMaterial.HasProperty("_Mouse_Coordinate")  ) {
+          targetMaterial.SetVector("_Mouse_Coordinate", hit.textureCoord );
+          targetMaterial.SetFloat("_Opacity", opacity );
+        }
+      }
+    }
 
    public enum State
    {

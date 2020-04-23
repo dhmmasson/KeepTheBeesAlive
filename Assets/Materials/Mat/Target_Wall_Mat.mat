@@ -19,6 +19,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - Texture2D_24CF7247:
+        m_Texture: {fileID: 2800000, guid: bcf94e0317a2746d591e9a894d502500, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -72,7 +76,9 @@ Material:
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
+    - _NearFieldSize: 0.2
     - _OcclusionStrength: 1
+    - _Opacity: 0.3
     - _Parallax: 0.02
     - _ReceiveShadows: 1
     - _SmoothnessTextureChannel: 0
@@ -83,7 +89,13 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - Color_E268DE54: {r: 7.1843147, g: 5.7173605, b: 0.41375628, a: 1}
+    - Vector2_6A41F45D: {r: 0, g: 0.5, b: 0, a: 0}
+    - Vector4_46C17203: {r: 1, g: 0.72, b: 404, a: 200}
+    - Vector4_51F3E4B3: {r: 0, g: 0, b: 100, a: 100}
+    - Vector4_C95EF3A9: {r: 0, g: 0, b: 0.5, a: 40}
+    - _Color: {r: 7.1843147, g: 5.7173605, b: 0.41375628, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _Mouse_Coordinate: {r: 0.5, g: 0.5, b: 0, a: 0}
     - _Mouse_Position: {r: 0.5, g: 0.5, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
