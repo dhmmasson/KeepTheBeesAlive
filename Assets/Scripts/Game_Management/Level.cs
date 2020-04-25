@@ -24,7 +24,8 @@ public class Level : MonoBehaviour
         for( int i = 0 ; i < element.repetition ; i++ ){
           float x = Random.Range(-2, 2) * element.spreadRadius  ;
           float y = i*.5f ;
-          Instantiate(element.asset, element.dropCenter + new Vector3(x,y,-0.5f), Quaternion.identity);
+          GameObject block = Instantiate(element.asset, element.dropCenter + new Vector3(x,y,-0.5f), Quaternion.identity);
+          Movable m= block.AddComponent(typeof( Movable )) as Movable ;
         }
       }
     }

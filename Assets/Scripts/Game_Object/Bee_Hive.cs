@@ -29,7 +29,6 @@ public class Bee_Hive : MonoBehaviour
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.relativeVelocity.magnitude > 2) {
-
             StartCoroutine(angerForSomeTime(5)) ;
         }
 
