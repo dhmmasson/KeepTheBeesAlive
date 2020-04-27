@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2133989928071514991}
   - component: {fileID: 2133989928069256620}
   - component: {fileID: 2133989928069256622}
+  - component: {fileID: 114077244516914656}
   m_Layer: 0
   m_Name: Branch
   m_TagString: Untagged
@@ -109,3 +110,19 @@ CapsuleCollider:
   m_Height: 0.7496394
   m_Direction: 1
   m_Center: {x: 0.007653472, y: 0.00018027423, z: 0.002703648}
+--- !u!114 &114077244516914656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2133989928069256617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67a1a9cc3cb24935825933868d65cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 7fe5e892b2b6044c58fa8eace2b89765, type: 3}
+  - {fileID: 8300000, guid: 1ffa8c89ae1594651b94cce2dcb8a2e9, type: 3}
+  pitch: 1.2

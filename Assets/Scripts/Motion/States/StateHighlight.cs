@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StateHighlight : StateHandler
+public class StateHighlight : StateGeneric
 {
   public Movable block ;
   private bool newTarget ;

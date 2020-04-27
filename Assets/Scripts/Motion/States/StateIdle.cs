@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StateIdle : StateHandler
+public class StateIdle : StateGeneric
 {
   public StateIdle( TargetSphere _targetSphere  ) :base( _targetSphere ) {
   }

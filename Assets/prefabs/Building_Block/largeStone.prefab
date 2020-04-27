@@ -124,8 +124,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 3880576813188753864}
-  - {fileID: 4959541018580761896}
+  - {fileID: 8300000, guid: 25aef9a1fdd71445ab79bfed280b9148, type: 3}
+  - {fileID: 8300000, guid: 1b9c5ddadb6d94fb5a30e5e7ad612d1f, type: 3}
+  - {fileID: 8300000, guid: e6bca796bd68647618c608bc532a0012, type: 3}
+  pitch: 0.9
 --- !u!1 &3392400531887611898
 GameObject:
   m_ObjectHideFlags: 0

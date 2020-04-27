@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 6493270175095644010}
   - component: {fileID: 6493270175095644013}
   - component: {fileID: 8093658497896671641}
+  - component: {fileID: 114881827865456414}
   m_Layer: 0
   m_Name: beehive
   m_TagString: Untagged
@@ -157,6 +158,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalBee: {fileID: 7912236204595618239}
   angryBee: {fileID: 6319814468557828282}
+  joint: {fileID: 0}
+  BeeSound: {fileID: 0}
+  magnitude: 20
+  hasDropped: 0
+--- !u!114 &114881827865456414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6493270175095644026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67a1a9cc3cb24935825933868d65cb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 39b46f2da31a149dc87252462b0ee13f, type: 3}
+  pitch: 1.2
 --- !u!1001 &1712168556264992734
 PrefabInstance:
   m_ObjectHideFlags: 0

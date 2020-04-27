@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StateMoving : StateHandler {
+public class StateMoving : StateGeneric {
   private SpringJoint spring ;
   public Movable block ;
   public StateMoving( TargetSphere _targetSphere  ) :base( _targetSphere ) {}

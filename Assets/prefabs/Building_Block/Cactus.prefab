@@ -954,5 +954,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - {fileID: 2434146764618051134}
-  - {fileID: 106898223373120513}
+  - {fileID: 8300000, guid: 39b46f2da31a149dc87252462b0ee13f, type: 3}
+  pitch: 1

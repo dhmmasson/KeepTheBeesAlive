@@ -9,6 +9,9 @@ public class Bee_Hive : MonoBehaviour
     public SpringJoint joint ;
     public AudioSource BeeSound ;
     public int magnitude = 20 ;
+
+    public bool hasDropped = false ;
+
     public void SetAnger() {
       BeeSound.Play();
       normalBee.SetActive( false ) ;
@@ -21,7 +24,7 @@ public class Bee_Hive : MonoBehaviour
     }
 
     void FixedUpdate() {
-      if( joint.currentForce.magnitude > magnitude ){
+      if( !hasDropped && joint.currentForce.magnitude > magnitude ){
           StartCoroutine(angerForSomeTime(5)) ;
       }
 
@@ -31,9 +34,10 @@ public class Bee_Hive : MonoBehaviour
         if (collision.relativeVelocity.magnitude > 2) {
             StartCoroutine(angerForSomeTime(5)) ;
         }
-
     }
-
+    void OnJointBreak(float breakForce) {
+        hasDropped = true ;
+    }
     IEnumerator angerForSomeTime( int time )
     {
         SetAnger() ;

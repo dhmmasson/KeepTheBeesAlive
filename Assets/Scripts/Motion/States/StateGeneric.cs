@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StateHandler {
+public class StateGeneric {
   public TargetSphere targetSphere ;
-  public StateHandler( TargetSphere _targetSphere  ) {
+  public StateGeneric( TargetSphere _targetSphere  ) {
     targetSphere = _targetSphere ;
   }
 

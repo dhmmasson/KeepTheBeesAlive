@@ -8,8 +8,8 @@ public class TargetSphere : MonoBehaviour
   public NamedColor[] colors ;
   public Dictionary< string, Color> stateColor ;
 
-  public Dictionary < State, StateHandler > handlers ;
-  public StateHandler.Context context ;
+  public Dictionary < State, StateGeneric > handlers ;
+  public StateGeneric.Context context ;
   private bool newState ;
   public TargetWall targetWall ;
   void Awake() {
@@ -23,7 +23,7 @@ public class TargetSphere : MonoBehaviour
     material = GetComponent<Renderer>().material ;
     material.EnableKeyword("_EMISSION");
 
-    handlers = new Dictionary< State, StateHandler >() ;
+    handlers = new Dictionary< State, StateGeneric >() ;
     handlers.Add( State.Idle, new StateIdle( this ) ) ;
     handlers.Add( State.Moving, new StateMoving( this ) ) ;
     handlers.Add( State.Highlight, new StateHighlight( this, targetWall ) ) ;
@@ -37,7 +37,7 @@ public class TargetSphere : MonoBehaviour
 
   // Update is called once per frame
   void Update() {
-    StateHandler.Context nextContext ;
+    StateGeneric.Context nextContext ;
     if( newState ) nextContext = handlers[ context.state ].Init( context, context ) ;
     else nextContext = handlers[ context.state ].Handle( context, context ) ;
     newState = ( nextContext.state != context.state ) ;
