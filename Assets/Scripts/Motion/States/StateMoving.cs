@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class StateMoving : StateGeneric {
   private SpringJoint spring ;
@@ -11,7 +12,12 @@ public class StateMoving : StateGeneric {
     targetSphere.SetEmission("Moving" ) ;
 
     block = context.selection.GetComponent<Movable>() ;
-    block.SetUpSpring( context.hit, targetSphere.gameObject.GetComponent<Rigidbody>() ) ;
+    try{
+      block.SetUpSpring( context.hit, targetSphere.gameObject.GetComponent<Rigidbody>() ) ;
+    } catch( Exception e) {
+      nextContext.state = TargetSphere.State.Idle ;
+      return End( context, nextContext ) ;
+    }
     block.SetHiglight( .51f ) ;
     return Handle( context, nextContext ) ;
   }

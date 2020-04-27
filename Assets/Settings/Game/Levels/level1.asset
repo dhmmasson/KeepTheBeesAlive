@@ -14,22 +14,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   elements:
   - asset: {fileID: 3074601606156810646, guid: 1de67b1f6d5ec488ba4ceb96fa4459c4, type: 3}
-    repetition: 2
+    repetition: 10
     dropCenter: {x: 1, y: 0, z: -0.5}
     spreadRadius: 0.5
   - asset: {fileID: 2209446515234721122, guid: ffc9a0f919eac401da1685329318fe16, type: 3}
-    repetition: 0
+    repetition: 5
     dropCenter: {x: 2, y: 0, z: 0.5}
     spreadRadius: 0
   - asset: {fileID: 6330071617767026334, guid: f3d9b6ca514c848e49678dd78b2cd74c, type: 3}
-    repetition: 0
+    repetition: 3
     dropCenter: {x: -0.5, y: 0, z: 0.2}
     spreadRadius: 0.15
   - asset: {fileID: 2133989928069256617, guid: ef8441f1e4b624eca8bb34ea14ef0e49, type: 3}
-    repetition: 0
+    repetition: 3
     dropCenter: {x: -2, y: 0, z: 0}
     spreadRadius: 0.25
   - asset: {fileID: 56670390776124900, guid: 579df4f85933a404db2ecdeee3913013, type: 3}
-    repetition: 0
+    repetition: 10
     dropCenter: {x: -1, y: 0, z: -0.5}
     spreadRadius: 0.2

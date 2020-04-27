@@ -11,7 +11,7 @@ public class Level : MonoBehaviour
 
 
     public TMPro.TextMeshProUGUI nextEventTextBox ;
-    int nextEvent = 6 ;
+    int nextEvent = 60 ;
     int currentEvent = 0 ;
     public WeatherEvents weathers ;
     public PostProcessVolume volume ;
