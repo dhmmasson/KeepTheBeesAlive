@@ -11,7 +11,7 @@ public class Level : MonoBehaviour
 
 
     public TMPro.TextMeshProUGUI nextEventTextBox ;
-    int nextEvent = 60 ;
+    int nextEvent = 6 ;
     int currentEvent = 0 ;
     public WeatherEvents weathers ;
     public PostProcessVolume volume ;
@@ -43,6 +43,9 @@ public class Level : MonoBehaviour
 
     IEnumerator waitForTheRain( GameObject target, int time ) {
       GameObject weatherSystem = Instantiate( target );
+      AmbiantSoundTrack rainSound = weatherSystem.GetComponentInChildren<AmbiantSoundTrack>()  ;
+
+      rainSound.Play( time ) ;
       yield return new WaitForSeconds(time);
       Destroy( weatherSystem ) ;
     }
