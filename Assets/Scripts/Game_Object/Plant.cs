@@ -21,7 +21,6 @@ public class Plant : MonoBehaviour
     }
 
     void OnParticleCollision(GameObject particuleSystemObject) {
-      Debug.Log( "watering "  ) ;
       int numCollisionEvents = particuleSystemObject.GetComponent<ParticleSystem>().GetCollisionEvents(this.gameObject, collisionEvents);
       StartCoroutine( water( numCollisionEvents ) );
       foreach( FlowerStage stage in stages) {
@@ -39,7 +38,6 @@ public class Plant : MonoBehaviour
       public int flowerCount = 0 ;
     }
     IEnumerator water( int qtt  ) {
-      Debug.Log( "watering " + qtt ) ;
       waterLevel += qtt ;
       yield return new WaitForSeconds(10);
       waterLevel -= qtt ;

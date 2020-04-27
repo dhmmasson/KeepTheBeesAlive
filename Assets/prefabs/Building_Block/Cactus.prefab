@@ -927,10 +927,20 @@ MonoBehaviour:
     flowerCount: 0
   - waterLevel: 5
     mesh: {fileID: 4300020, guid: a957977477a8841fe8db4137cb34138d, type: 3}
+    flowerCount: 1
+  - waterLevel: 10
+    mesh: {fileID: 4300022, guid: a957977477a8841fe8db4137cb34138d, type: 3}
+    flowerCount: 2
+  - waterLevel: 15
+    mesh: {fileID: 4300026, guid: a957977477a8841fe8db4137cb34138d, type: 3}
     flowerCount: 3
+  - waterLevel: 20
+    mesh: {fileID: 4300028, guid: a957977477a8841fe8db4137cb34138d, type: 3}
+    flowerCount: 4
   - waterLevel: 30
-    mesh: {fileID: 4300002, guid: a957977477a8841fe8db4137cb34138d, type: 3}
+    mesh: {fileID: 4300024, guid: a957977477a8841fe8db4137cb34138d, type: 3}
     flowerCount: 0
+  nbFlower: 0
 --- !u!114 &8454511410853724949
 MonoBehaviour:
   m_ObjectHideFlags: 0

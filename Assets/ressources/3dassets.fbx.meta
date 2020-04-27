@@ -15,6 +15,10 @@ ModelImporter:
     100018: rain
     100020: Scene
     100022: Cactus.Flower
+    100024: Cactus.Flower.001
+    100026: Cactus.Flower.002
+    100028: Cactus.Flower.003
+    100030: Cactus.Wet
     400000: //RootNode
     400002: Bee
     400004: beehive
@@ -27,6 +31,10 @@ ModelImporter:
     400018: rain
     400020: Scene
     400022: Cactus.Flower
+    400024: Cactus.Flower.001
+    400026: Cactus.Flower.002
+    400028: Cactus.Flower.003
+    400030: Cactus.Wet
     2100000: flatColor
     2300000: Bee
     2300002: beehive
@@ -40,6 +48,10 @@ ModelImporter:
     2300018: Scene
     2300020: Cactus.Flower
     2300022: //RootNode
+    2300024: Cactus.Flower.001
+    2300026: Cactus.Flower.002
+    2300028: Cactus.Flower.003
+    2300030: Cactus.Wet
     3300000: Bee
     3300002: beehive
     3300004: Branch
@@ -52,6 +64,10 @@ ModelImporter:
     3300018: Scene
     3300020: Cactus.Flower
     3300022: //RootNode
+    3300024: Cactus.Flower.001
+    3300026: Cactus.Flower.002
+    3300028: Cactus.Flower.003
+    3300030: Cactus.Wet
     4300000: Scene
     4300002: Cactus
     4300004: beehive
@@ -63,6 +79,10 @@ ModelImporter:
     4300016: Bee
     4300018: rain
     4300020: Cactus.Flower
+    4300022: Cactus.Flower.001
+    4300024: Cactus.Wet
+    4300026: Cactus.Flower.002
+    4300028: Cactus.Flower.003
   externalObjects: {}
   materials:
     importMaterials: 1
