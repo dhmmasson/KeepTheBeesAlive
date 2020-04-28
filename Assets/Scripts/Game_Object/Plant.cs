@@ -7,26 +7,35 @@ public class Plant : MonoBehaviour
     public int waterLevel = 0 ;
     public FlowerStage[] stages ;
     public int nbFlower = 0 ;
-
+    FlowerStage currentStage ;
+    private MeshFilter mf ;
+    private Mesh[] meshes ;
     private List<ParticleCollisionEvent> collisionEvents;
     void Start()
     {
+      mf = GetComponent<MeshFilter>() ;
       collisionEvents = new List<ParticleCollisionEvent>();
+      CreateMesh() ;
+      updateMesh( ) ;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
+    void CreateMesh() {
+      meshes = new Mesh[ stages.Length ] ;
+      int i = 0 ;
+      foreach( FlowerStage stage in stages) {
+        meshes[ i++ ] = Instantiate(stage.mesh) ;
+        
+      }
 
     }
     void updateMesh() {
+      int i = -1 ;
       foreach( FlowerStage stage in stages) {
-        if( waterLevel > stage.waterLevel ) {
-          MeshFilter mf = GetComponent<MeshFilter>() ;
-          mf.mesh = Instantiate(stage.mesh) ;
-          nbFlower = stage.flowerCount ;
+        if( waterLevel >= stage.waterLevel ) {
+          i++ ;
         }
       }
+      mf.mesh = meshes[i] ;
+      nbFlower = stages[i].flowerCount ;
     }
     void OnParticleCollision(GameObject particuleSystemObject) {
       int numCollisionEvents = particuleSystemObject.GetComponent<ParticleSystem>().GetCollisionEvents(this.gameObject, collisionEvents);
