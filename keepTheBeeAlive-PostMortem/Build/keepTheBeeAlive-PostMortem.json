@@ -1,0 +1,14 @@
+{
+"companyName": "dhmmasson",
+"productName": "KeepTheBeeJeezAlive",
+"dataUrl": "keepTheBeeAlive-PostMortem.data.unityweb",
+"wasmCodeUrl": "keepTheBeeAlive-PostMortem.wasm.code.unityweb",
+"wasmFrameworkUrl": "keepTheBeeAlive-PostMortem.wasm.framework.unityweb",
+"TOTAL_MEMORY": 536870912,
+"graphicsAPI": ["WebGL 2.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"backgroundUrl": "keepTheBeeAlive-PostMortem.jpg",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#FFFFFF",
+"cacheControl": {"default": "must-revalidate"}
+}
