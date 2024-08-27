@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.13377949.svg)](https://doi.org/10.5281/zenodo.13377949)
+
 # Keep The Bee (jeez) Alive
 
 Keep the bees alive by building a shelter for their hive in this physics-based balancing game. Stack construction elements carefully to protect the bees from the rain. Inspired by the iconic Bee Gees hit *Staying Alive*, this game blends strategic thinking with a groovy soundtrack. Can you keep the hive safe and buzzing?
