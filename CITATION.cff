@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+title: Keep the bee (Jeez) Alive
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Dimitri
+    family-names: Masson
+    orcid: 'https://orcid.org/0000-0002-7072-3146'
+    email: dhm.masson@gmail.com
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.13377949
+repository-code: 'https://github.com/dhmmasson/KeepTheBeesAlive/tree/v2.0.0'
+url: 'https://dhmmasson.github.io/KeepTheBeesAlive/keepTheBeeAlive-PostMortem'
+abstract: >-
+  Keep the bees alive by building a shelter 
+  for their hive in this physics-based balancing game. 
+  Stack construction elements carefully to protect 
+  the bees from the rain. 
+  Inspired by the iconic Bee Gees hit *Staying Alive*, 
+  this game blends strategic thinking with a groovy soundtrack. 
+  Can you keep the hive safe and buzzing?
+keywords:
+  - Ludum Dare
+  - Game
+  - Web
+license: MIT
+version: v2.0.0
+date-released: '2020-04-30'
